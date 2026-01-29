@@ -1,0 +1,75 @@
+
+services:
+
+  ms-customer-service:
+    build: ./ms-customer-service
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-customer:5432/customer_db
+      - SPRING_DATASOURCE_USERNAME=kahuaski
+      - SPRING_DATASOURCE_PASSWORD=ADmin123!
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    depends_on:
+      db-customer:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
+  ms-account-service:
+    build: ./ms-account-service
+    ports:
+      - "8082:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-account:5432/account_db
+      - SPRING_DATASOURCE_USERNAME=kahuaski
+      - SPRING_DATASOURCE_PASSWORD=ADmin123!
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    depends_on:
+      db-account:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  db-customer:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=customer_db
+      - POSTGRES_USER=kahuaski
+      - POSTGRES_PASSWORD=ADmin123!
+    volumes:
+      - db-customer-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kahuaski -d customer_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  db-account:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=account_db
+      - POSTGRES_USER=kahuaski
+      - POSTGRES_PASSWORD=ADmin123!
+    volumes:
+      - db-account-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kahuaski -d account_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db-customer-data:
+  db-account-data:

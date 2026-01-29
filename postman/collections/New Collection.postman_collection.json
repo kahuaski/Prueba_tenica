@@ -1,0 +1,433 @@
+{
+  "info": {
+    "_postman_id": "e59cf0b8-84c0-44b8-912e-3dfa84d9d114",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "clientes",
+      "item": [
+        {
+          "name": "getAllClients",
+          "id": "266fa5e7-c5b4-4508-b294-69283ef63a15",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "getClientById",
+          "id": "d087d86f-b4df-467b-8249-a57133e69be5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "host": [
+                "{{ApiUrlclientes}}clientes"
+              ],
+              "path": [
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Get a single client by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "createClient",
+          "id": "c6ffd0c3-6471-4af0-bbaf-8b353514cfa2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"+1234567890\",\n  \"address\": \"123 Main St, City, Country\",\n  \"company\": \"Example Corp\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlclientes}}clientes",
+              "host": [
+                "{{ApiUrlclientes}}clientes"
+              ]
+            },
+            "description": "Create a new client"
+          },
+          "response": []
+        },
+        {
+          "name": "updateClient",
+          "id": "c6b5553e-30d6-4d05-9bae-94746ea15d5e",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe Updated\",\n  \"email\": \"john.updated@example.com\",\n  \"phone\": \"+1234567890\",\n  \"address\": \"456 New St, City, Country\",\n  \"company\": \"Updated Corp\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "host": [
+                "{{ApiUrlclientes}}clientes"
+              ],
+              "path": [
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Update an existing client by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "deleteClient",
+          "id": "2e12606c-886e-459b-9116-7bef1181f496",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "host": [
+                "{{ApiUrlclientes}}clientes"
+              ],
+              "path": [
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Delete a client by ID"
+          },
+          "response": []
+        }
+      ],
+      "id": "1f8a2383-9c6e-46ba-a7aa-296b22ef3ea2"
+    },
+    {
+      "name": "cuentas",
+      "item": [
+        {
+          "name": "getcuentas",
+          "id": "833c4b83-0adc-4657-9a44-58ddb0cb5814",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "getCuentaById",
+          "id": "84880350-c6ad-464d-be2c-9a4e768ba2c8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "cuentas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Get account by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "createCuenta",
+          "id": "fcdd9905-e409-44ce-ad33-7972453a7476",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numeroCuenta\": \"123456\",\n  \"tipoCuenta\": \"Ahorros\",\n  \"saldoInicial\": 1000.00,\n  \"estado\": true,\n  \"clienteId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/cuentas",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "cuentas"
+              ]
+            },
+            "description": "Create new account"
+          },
+          "response": []
+        },
+        {
+          "name": "updateCuenta",
+          "id": "bc4ed822-febc-41d1-b3ed-8c0ab4c607ac",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numeroCuenta\": \"123456\",\n  \"tipoCuenta\": \"Corriente\",\n  \"saldoInicial\": 1500.00,\n  \"estado\": true,\n  \"clienteId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "cuentas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Update account"
+          },
+          "response": []
+        },
+        {
+          "name": "deleteCuenta",
+          "id": "033aa3db-8bcc-49eb-9ae2-faf03707789d",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "cuentas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Delete account"
+          },
+          "response": []
+        }
+      ],
+      "id": "3de9de23-aafa-445f-ab9f-785f55726ba5"
+    },
+    {
+      "name": "movimientos",
+      "item": [
+        {
+          "name": "getMovimientos fechas",
+          "id": "31d41ede-1bf2-4570-9d7f-fbe99267836e",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "getAllMovimientos",
+          "id": "422e71d3-e848-401c-a3ba-dd8eaf7edf27",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/movimientos",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "movimientos"
+              ]
+            },
+            "description": "Get all transactions"
+          },
+          "response": []
+        },
+        {
+          "name": "getMovimientoById",
+          "id": "018e3532-b512-43cd-ac57-9d7a05bb6001",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "movimientos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Get transaction by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "createMovimiento",
+          "id": "796585b3-4a2d-40eb-a75c-b61b673b7bce",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2024-01-15\",\n  \"tipoMovimiento\": \"Deposito\",\n  \"valor\": 500.00,\n  \"saldo\": 1500.00,\n  \"cuentaId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/movimientos",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "movimientos"
+              ]
+            },
+            "description": "Create new transaction"
+          },
+          "response": []
+        },
+        {
+          "name": "updateMovimiento",
+          "id": "a7241397-9ff6-409f-b1a9-c411d59c6366",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2024-01-15\",\n  \"tipoMovimiento\": \"Retiro\",\n  \"valor\": 200.00,\n  \"saldo\": 1300.00,\n  \"cuentaId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "movimientos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Update transaction"
+          },
+          "response": []
+        },
+        {
+          "name": "deleteMovimiento",
+          "id": "e3578d22-7af5-4db5-b944-75eab9f103e0",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "host": [
+                "{{ApiUrlcuentas}}api"
+              ],
+              "path": [
+                "movimientos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            },
+            "description": "Delete transaction"
+          },
+          "response": []
+        }
+      ],
+      "id": "2df4ba32-439a-4a28-bff8-e31f938c534e"
+    }
+  ]
+}

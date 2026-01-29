@@ -1,0 +1,29 @@
+# Root .gitignore for the workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Java / Maven
+/target/
+**/target/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.m2/
+
+# Logs
+*.log
+logs/
+
+# Docker
+.env
+docker-compose.override.yml
+
+# Other
+*.class
+*.jar
