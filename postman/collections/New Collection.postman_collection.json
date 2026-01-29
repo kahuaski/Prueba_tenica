@@ -13,7 +13,16 @@
           "id": "266fa5e7-c5b4-4508-b294-69283ef63a15",
           "request": {
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": {
+              "raw": "{{apiurlClientes}}api/clientes",
+              "host": [
+                "{{apiurlClientes}}api"
+              ],
+              "path": [
+                "clientes"
+              ]
+            }
           },
           "response": []
         },
@@ -24,11 +33,12 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "raw": "{{apiurlClientes}}api/clientes/:id",
               "host": [
-                "{{ApiUrlclientes}}clientes"
+                "{{apiurlClientes}}api"
               ],
               "path": [
+                "clientes",
                 ":id"
               ],
               "variable": [
@@ -62,9 +72,12 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlclientes}}clientes",
+              "raw": "{{apiurlClientes}}api/clientes",
               "host": [
-                "{{ApiUrlclientes}}clientes"
+                "{{apiurlClientes}}api"
+              ],
+              "path": [
+                "clientes"
               ]
             },
             "description": "Create a new client"
@@ -92,11 +105,12 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "raw": "{{apiurlClientes}}api/clientes/:id",
               "host": [
-                "{{ApiUrlclientes}}clientes"
+                "{{apiurlClientes}}api"
               ],
               "path": [
+                "clientes",
                 ":id"
               ],
               "variable": [
@@ -116,11 +130,12 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlclientes}}clientes/:id",
+              "raw": "{{apiurlClientes}}api/clientes/:id",
               "host": [
-                "{{ApiUrlclientes}}clientes"
+                "{{apiurlClientes}}api"
               ],
               "path": [
+                "clientes",
                 ":id"
               ],
               "variable": [
@@ -144,7 +159,10 @@
           "id": "833c4b83-0adc-4657-9a44-58ddb0cb5814",
           "request": {
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": {
+              "raw": ""
+            }
           },
           "response": []
         },
@@ -155,9 +173,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "raw": "{{apiurlCuentas}}api/cuentas/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "cuentas",
@@ -194,9 +212,9 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/cuentas",
+              "raw": "{{apiurlCuentas}}api/cuentas",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "cuentas"
@@ -227,9 +245,9 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "raw": "{{apiurlCuentas}}api/cuentas/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "cuentas",
@@ -252,9 +270,9 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/cuentas/:id",
+              "raw": "{{apiurlCuentas}}api/cuentas/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "cuentas",
@@ -281,7 +299,31 @@
           "id": "31d41ede-1bf2-4570-9d7f-fbe99267836e",
           "request": {
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": {
+              "raw": "{{apiurlCuentas}}api/movimientos/account/{accountNumber}/fecha?inicio=2026-01-01T00:00:00Z&fin=2026-01-29T23:59:59Z",
+              "host": [
+                "{{apiurlCuentas}}api"
+              ],
+              "path": [
+                "movimientos",
+                "account",
+                "{accountNumber}",
+                "fecha"
+              ],
+              "query": [
+                {
+                  "key": "inicio",
+                  "value": "2026-01-01T00:00:00Z",
+                  "uuid": "e7888db9-da8c-458d-b788-beebf5db3ea2"
+                },
+                {
+                  "key": "fin",
+                  "value": "2026-01-29T23:59:59Z",
+                  "uuid": "b15c6391-6f6e-47ae-b753-9997271de73a"
+                }
+              ]
+            }
           },
           "response": []
         },
@@ -292,9 +334,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/movimientos",
+              "raw": "{{apiurlCuentas}}api/movimientos",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "movimientos"
@@ -311,9 +353,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "raw": "{{apiurlCuentas}}api/movimientos/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "movimientos",
@@ -350,9 +392,9 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/movimientos",
+              "raw": "{{apiurlCuentas}}api/movimientos",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "movimientos"
@@ -383,9 +425,9 @@
               }
             },
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "raw": "{{apiurlCuentas}}api/movimientos/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "movimientos",
@@ -408,9 +450,9 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{ApiUrlcuentas}}api/movimientos/:id",
+              "raw": "{{apiurlCuentas}}api/movimientos/:id",
               "host": [
-                "{{ApiUrlcuentas}}api"
+                "{{apiurlCuentas}}api"
               ],
               "path": [
                 "movimientos",

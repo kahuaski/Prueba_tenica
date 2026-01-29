@@ -1,7 +1,23 @@
 {
   "id": "6573427c-b0be-4317-8aed-4e96d03a70c0",
   "name": "Globals",
-  "values": [],
+  "values": [
+    {
+      "key": "apiurlClientes",
+      "value": "",
+      "enabled": true,
+      "type": "default",
+      "description": ""
+    },
+    {
+      "key": "apiurlCuentas",
+      "value": "",
+      "enabled": true,
+      "type": "default",
+      "description": ""
+    }
+  ],
   "_postman_variable_scope": "globals",
-  "_postman_exported_at": "2026-01-29T15:36:54.066Z"
+  "_postman_exported_at": "2026-01-29T15:54:46.532Z",
+  "_postman_exported_using": "Postman/11.0.0"
 }
