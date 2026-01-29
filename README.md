@@ -103,8 +103,3 @@ mvnw.cmd test
 ## Control de versiones
 - Los cambios fueron comiteados y la rama `main` fue pusheada a `origin/main`.
 
-Si quieres, puedo:
-- Añadir el alias `fecha=inicio,fin` para el endpoint de reportes.
-- Ejecutar peticiones de prueba y mostrar respuestas concretas.
-- Generar ejemplos curl adicionales o Postman collection.
-"# Prueba_tenica" 
